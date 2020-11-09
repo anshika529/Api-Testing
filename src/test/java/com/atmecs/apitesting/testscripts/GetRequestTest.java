@@ -1,9 +1,11 @@
 package com.atmecs.apitesting.testscripts;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -12,16 +14,16 @@ import junit.framework.Assert;
 public class GetRequestTest {
 
 	@Test
-	public void getApiTest() {
+	public void getApiTest() throws MalformedURLException {
 
 		// specify base uri
-		RestAssured.baseURI = "https://reqres.in/api/users";
+		String requestUrl = "https://reqres.in/api/users/7";
 
 		// request object
-		RequestSpecification httprequest = RestAssured.given();
+		RequestSpecification request = RestAssured.given();
 
 		// Response object
-		Response response = httprequest.request(Method.GET, "/7");
+		Response response = request.get(new URL(requestUrl));
 		
 		int statusCode = response.getStatusCode();
 		String responseBody = response.getBody().asString();
