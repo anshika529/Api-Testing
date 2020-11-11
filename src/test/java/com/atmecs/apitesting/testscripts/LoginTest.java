@@ -10,10 +10,10 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class LoginApiTest {
+public class LoginTest {
 	@Test
-	public void LoginTest() throws MalformedURLException {
-	String requestUrl="";
+	public void LoginApiTest() throws MalformedURLException {
+	String requestUrl="https://reqres.in/api/users/7";
 	RequestSpecification request = RestAssured.given();
 
 	Response response = request

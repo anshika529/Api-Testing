@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.apitesting.testscripts.DeleteRequestTest">
+      <class name="com.atmecs.apitesting.testscripts.PostRequestTest">
         <methods>
-          <include name="deleteApiTest"/>
+          <include name="PostApiTest"/>
         </methods>
-      </class> <!-- com.atmecs.apitesting.testscripts.DeleteRequestTest -->
+      </class> <!-- com.atmecs.apitesting.testscripts.PostRequestTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
